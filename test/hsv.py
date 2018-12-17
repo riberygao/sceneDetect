@@ -19,16 +19,16 @@ img_decrease_v = cv2.resize(img_decrease_v, (int(width / 2), int(height / 2)), i
 decodeDat = cv2.cvtColor(img_decrease_v,cv2.COLOR_BGR2GRAY)
 
 cv2.imshow("de",decodeDat)
-circle = cv2.HoughCircles(decodeDat, cv2.HOUGH_GRADIENT, 1, 100, param2=50, minRadius=5, maxRadius=200)
-print(circle)
-circles = circle[0, :, :]  # 提取为二维
-circles = np.uint16(np.around(circles))  # 四舍五入，取整
-for i in circles[:]:
-    cv2.circle(decodeDat, (i[0], i[1]), i[2], (255, 0, 0), 5)  # 画圆
-    cv2.circle(decodeDat, (i[0], i[1]), 2, (255, 0, 255), 10)  # 画圆心
-    print((i[0], i[1]))
-cv2.imshow("cir", decodeDat)
-cv2.waitKey()
+# circle = cv2.HoughCircles(decodeDat, cv2.HOUGH_GRADIENT, 1, 100, param2=50, minRadius=5, maxRadius=200)
+# print(circle)
+# circles = circle[0, :, :]  # 提取为二维
+# circles = np.uint16(np.around(circles))  # 四舍五入，取整
+# for i in circles[:]:
+#     cv2.circle(decodeDat, (i[0], i[1]), i[2], (255, 0, 0), 5)  # 画圆
+#     cv2.circle(decodeDat, (i[0], i[1]), 2, (255, 0, 255), 10)  # 画圆心
+#     print((i[0], i[1]))
+# cv2.imshow("cir", decodeDat)
+# cv2.waitKey()
 # cv2.imshow("hsv", img_decrease_v)
 # cv2.waitKey()
 
